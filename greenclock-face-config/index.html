@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class='item-container'>
-    <h1 class='title'>Watchface<br>Configuration Page</h1>
+    <h1 class='title'>Greenclock-face<br>Configuration Page</h1>
   </div>
 
   <div class='item-container'>
@@ -24,18 +24,35 @@
     <div class='item-container-header'>Customizability</div>
     <div class='item-container-content'>
       <label class='item'>
-        Background Color
-        <input id='backgroundColorPicker' type='text' class='item-color item-color-sunny' value='#000000'>
+        Minute circle filling color
+        <input id='minuteCircleColor' type='text' class='item-color item-color-sunny' value='#AAFFAA'>
+      </label>
+
+      <label class='item'>
+        Hour circle filling color
+        <input id='hourCircleColor' type='text' class='item-color item-color-sunny' value='#00FF55'>
+      </label>
+
+
+      <label class='item'>
+        Show Date
+        <input id='timeFormatCheckbox' type='checkbox' class='item-checkbox' checked>
       </label>
       <label class='item'>
-        24-Hour Format
-        <input id='timeFormatCheckbox' type='checkbox' class='item-checkbox' checked>
+        Show digital time
+        <input id='timeFormatCheckbox1' type='checkbox' class='item-checkbox' checked>
+      </label>
+      <label class='item'>
+        Show Battery-Load
+        <input id='showBatteryLoad' type='checkbox' class='item-checkbox' checked>
       </label>
     </div>
     <div class='item-container-footer'>
       These settings only change on the watch after you click save.
     </div>
   </div>
+
+
 
   <div class='item-container'>
     <div class='button-container'>

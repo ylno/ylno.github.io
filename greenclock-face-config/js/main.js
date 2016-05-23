@@ -15,26 +15,31 @@ function submitHandler() {
 }
 
 function loadOptions() {
-  var $backgroundColorPicker = $('#backgroundColorPicker');
-  var $timeFormatCheckbox = $('#timeFormatCheckbox');
+  var $minuteCircleColor = $('#minuteCircleColor');
+  var $hourCircleColor = $('#hourCircleColor');
+  var $showBatteryLoad = $('#showBatteryLoad');
 
-  if (localStorage.backgroundColor) {
-    $backgroundColorPicker[0].value = localStorage.backgroundColor;
-    $timeFormatCheckbox[0].checked = localStorage.twentyFourHourFormat === 'true';
+  if (localStorage.minuteCircleColor) {
+    $minuteCircleColor[0].value = localStorage.minuteCircleColor;
+    $hourCircleColor[0].value = localStorage.hourCircleColor;
+    $showBatteryLoad[0].checked = localStorage.showBatteryLoad === 'true';
   }
 }
 
 function getAndStoreConfigData() {
-  var $backgroundColorPicker = $('#backgroundColorPicker');
-  var $timeFormatCheckbox = $('#timeFormatCheckbox');
+  var $minuteCircleColor = $('#minuteCircleColor');
+  var $hourCircleColor = $('#hourCircleColor');
+  var $showBatteryLoad = $('#showBatteryLoad');
 
   var options = {
-    backgroundColor: $backgroundColorPicker.val(),
-    twentyFourHourFormat: $timeFormatCheckbox[0].checked
+    minuteCircleColor: $minuteCircleColor.val(),
+    hourCircleColor: $hourCircleColor.val(),
+    showBatteryLoad: $showBatteryLoad[0].checked
   };
 
-  localStorage.backgroundColor = options.backgroundColor;
-  localStorage.twentyFourHourFormat = options.twentyFourHourFormat;
+  localStorage.minuteCircleColor = options.minuteCircleColor;
+  localStorage.hourCircleColor = options.hourCircleColor;
+  localStorage.showBatteryLoad = options.showBatteryLoad;
 
   console.log('Got options: ' + JSON.stringify(options));
   return options;
